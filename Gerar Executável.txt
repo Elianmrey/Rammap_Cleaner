@@ -1,0 +1,26 @@
+Na pasta raiz 
+1- Click com botão direito num espaço vazio
+2- Selecione a opção "Abrir no terminal"
+3 colar o codigo abaixo
+
+Nota: Certifique-se que o arquivo "rammap_cleaner_gui.py" e o "test_rammap_cleaner.py" (Esse último para testes), esta na pasta raiz.
+
+
+py -m venv .venv
+.\.venv\Scripts\Activate.ps1
+
+py -m pip install -r requirements.txt
+py -m pip install pytest pyinstaller
+
+# Executar testes antes da compilação
+py -m pytest -v
+
+# Gerar executável único
+py -m PyInstaller `
+    --noconfirm `
+    --clean `
+    --onefile `
+    --windowed `
+    --uac-admin `
+    --name RAMMAP_CLEANER `
+    rammap_cleaner_gui.py
