@@ -8,7 +8,7 @@ Nota: Certifique-se que o arquivo "rammap_cleaner_gui.py" e o "test_rammap_clean
 
 ########################################################################################################
 
->>>>>>> origin/main
+
 
 py -m venv .venv
 .\.venv\Scripts\Activate.ps1
